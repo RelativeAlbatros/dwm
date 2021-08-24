@@ -1,7 +1,6 @@
 *.swp
 *.swo
 *.rej
-*.diff
 xinitrc.example
 dwmstatus/dwmstatus
 *.o
