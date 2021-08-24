@@ -1,8 +1,9 @@
 *.swp
 *.swo
 *.rej
+*.o
+*.orig
 xinitrc.example
 dwmstatus/dwmstatus
-*.o
 dwm
 original-dwm.c

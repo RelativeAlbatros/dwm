@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* constants */
-#define TERM "terminator"
+#define TERM "alacritty"
 
 #include "include/color-palettes/green-forest.h"
 /* appearance */
