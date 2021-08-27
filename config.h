@@ -1,25 +1,21 @@
 /* See LICENSE file for copyright and license details. */
 
 /* constants */
-#define TERM "alacritty"
+#define TERM "lxterminal"
 
-/* color palette to load */
-#include "color-palettes/green-forest.h"
-// #include "color-palettes/blue-bubble.h"
-
+#include "color-palettes/blue-bubble.h"
+// #include "color-palettes/green-forest.h"
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 50;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 50;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappiv    = 15;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 30;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 30;       /* vert outer gap between windows and screen edge */
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
+static const int user_bh            = 25;       /* dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int usealtbar          = 1; /* 1 means use non-dwm status bar */
-static const char *altbarclass      = "Polybar"; /* Alternate bar class name */
-static const char *altbarcmd        = "$HOME/bar.sh"; /* Alternate bar launch command*/
 static const char *fonts[]          = { "monospace:size=10"};
 static const char dmenufont[]       = "monospace:size=10";
 
