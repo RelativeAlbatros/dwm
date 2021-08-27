@@ -3,7 +3,10 @@
 /* constants */
 #define TERM "alacritty"
 
-#include "include/color-palettes/green-forest.h"
+/* color palette to load */
+#include "color-palettes/green-forest.h"
+// #include "color-palettes/blue-bubble.h"
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
