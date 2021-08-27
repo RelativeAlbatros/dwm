@@ -1,2 +1,2 @@
-# put your startup commands here
-
+# set background image
+feh --bg-fill /usr/share/pixmaps/background.jpg

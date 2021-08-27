@@ -2,8 +2,6 @@ dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
 
-NOTICE:
-don't forget to change the terminal in config.def.h
 
 Applied patches
 ---------------
@@ -11,6 +9,7 @@ Applied patches
 - pertag.diff
 - always-center.diff
 - bottom stack
+-  
 
 todo
 ----
