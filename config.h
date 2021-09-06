@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 /* constants */
-#define TERM "lxterminal"
+#define TERM "alacritty"
 
 #include "color-palettes/blue-bubble.h"
 // #include "color-palettes/green-forest.h"
@@ -15,11 +15,11 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int user_bh            = 28;       /* dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Anonymice Nerd Font:size=12"};
+static const char *fonts[]          = { "Iosevka,Iosevka Nerd Font:size=11"};
 static const char dmenufont[]       = "monospace:size=10";
 
 /* tagging */
-static const char *tags[] = { "\uf1d0", "\ue795", "\ue795", "\ue795", "\ue7c5", "\uf09b", "\uf0e6", "\uf268" };
+static const char *tags[] = { "\uf1d0", "\ue795", "\ue795", "\ue795", "\ue7c5", "\ufbad","\uf09b", "\uf0e6", "\uf738" };
 static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7","8" };
 
 static const Rule rules[] = {
