@@ -19,7 +19,7 @@ static const char *fonts[]          = { "Iosevka,Iosevka Nerd Font:size=11"};
 static const char dmenufont[]       = "monospace:size=10";
 
 /* tagging */
-static const char *tags[] = { "\uf1d0", "\ue795", "\ue795", "\ue795", "\ue7c5", "\ufbad","\uf09b", "\uf0e6", "\uf738" };
+static const char *tags[] = { "\uf1d0", "\ue795", "\ue795", "\ue795", "\ue62b", "\ufbad", "\uf09b", "\uf0e6", "\uf269" };
 static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7","8" };
 
 static const Rule rules[] = {
