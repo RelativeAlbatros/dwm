@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 /* constants */
-#define TERM "lxterminal"
+#define TERM "st"
 
-#include "color-palettes/blue-bubble.h"
+#include "color-palettes/dark-blue.h"
 // #include "color-palettes/green-forest.h"
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -15,11 +15,19 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int user_bh            = 28;       /* dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Anonymice Nerd Font:size=10"};
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
+static const char *fonts[]          = { "Anonymice Nerd Font:size=12"};
 static const char dmenufont[]       = "monospace:size=10";
+/* alpha bar transparency */
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
 
 /* tagging */
-static const char *tags[] = { "\uf315", "\ue795", "\ue795", "\ue795","\ue7c5", "\ue743" };
+static const char *tags[] = { "\uf1d0", "\ue795", "\ue795", "\ue795", "\ue7c5", "\uf09b","\uf0e6", "\uf268",  };
 static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6" };
 
 static const Rule rules[] = {
@@ -29,7 +37,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Chrome",   NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Chromium", NULL,       NULL,       1 << 7,       0,           -1 },
 };
 
 /* layout(s) */
@@ -85,6 +93,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ MODKEY|ShiftMask,             XK_r,      rofiRun, 	     {0} },
+	{ MODKEY|ShiftMask,             XK_w,      rofiWindow,     {0} },
   /* layouts */
 	{ ControlMask,                  XK_1,      setlayout,      {.v = &layouts[0]} },
 	{ ControlMask,                  XK_2,      setlayout,      {.v = &layouts[1]} },
