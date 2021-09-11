@@ -27,8 +27,8 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "\uf1d0", "\ue795", "\ue795", "\ue795", "\ue7c5", "\uf09b","\uf0e6", "\uf268",  };
-static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6" };
+static const char *tags[] = { "\uf1d0", "\ue795", "\ue795", "\ue795", "\ue62b", "\ufbad", "\uf09b", "\uf0e6", "\uf269" };
+static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7","8" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -37,7 +37,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Chromium", NULL,       NULL,       1 << 7,       0,           -1 },
+	{ "Firefox",   NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
