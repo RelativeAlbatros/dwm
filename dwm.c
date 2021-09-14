@@ -265,8 +265,6 @@ static void defaultgaps(const Arg *arg);
 /* custom functions*/
 static void runAutostart(void);
 static void rofiRun(const Arg *arg);
-static void rofiWindow(const Arg *arg);
-
 /* variables */
 static const char broken[] = "broken";
 static const char dwmdir[] = "dwm";
@@ -2611,11 +2609,6 @@ runAutostart(void) {
 void
 rofiRun(const Arg *arg) {
 	system("rofi -show run");
-}
-
-void
-rofiWindow(const Arg *arg) {
-	system("rofi -show window");
 }
 
 int
