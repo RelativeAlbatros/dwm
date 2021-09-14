@@ -2,8 +2,6 @@
 /* constants */
 #define TERM "st"
 
-#include "color-palettes/dark-blue.h"
-// #include "color-palettes/green-forest.h"
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -17,8 +15,15 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
+static const char theme[] = "blue";
 static const char *fonts[]          = { "Anonymice Nerd Font:size=12"};
 static const char dmenufont[]       = "monospace:size=10";
+#if theme == blue
+	#include "color-palettes/dark-blue.h"
+#else
+	#include "color-palettes/green-forest.h"
+#endif
+
 /* alpha bar transparency */
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
