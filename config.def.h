@@ -31,8 +31,8 @@ static const unsigned int alphas[][3]      = {
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
-/* tagging */
-static const char *tags[] = { "\uf1d0", "\ue795", "\ue795", "\ue795", "\ue62b", "\ufbad", "\uf09b", "\uf0e6", "\uf269" };
+/* tagging: dwm crashes if the number of tags do not match. */
+static const char *tags[] = { "\uf1d0", "\ue795", "\ue795", "\ue795", "\ue62b", "\uf09b", "\uf0e6", "\uf269" };
 static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7","8" };
 
 static const Rule rules[] = {
