@@ -265,6 +265,7 @@ static void defaultgaps(const Arg *arg);
 /* custom functions*/
 static void runAutostart(void);
 static void rofiRun(const Arg *arg);
+
 /* variables */
 static const char broken[] = "broken";
 static const char dwmdir[] = "dwm";
