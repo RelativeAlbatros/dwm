@@ -1,5 +1,13 @@
+#!/bin/bash
+
 # set background image
-feh --bg-fill /usr/share/pixmaps/background.jpg &
+if [[ -f $HOME/.fehbg ]]; then
+	~/.fehbg
+else
+	feh --bg-fill /usr/share/pixmaps/background.jpg
+fi
 
 dwmbar &
+st &
+
 exit 0
