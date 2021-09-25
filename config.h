@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
-/* constants */
+
+/* macros */
 #define TERM "st"
 
 /* appearance */
@@ -7,8 +8,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 15;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 30;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 30;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappoh    = 15;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 15;       /* vert outer gap between windows and screen edge */
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int user_bh            = 28;       /* dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -16,9 +17,9 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char theme[] = "blue";
-static const char *fonts[]          = { "Anonymice Nerd Font:size=12"};
+static const char *fonts[]          = { "Anonymice Nerd Font:size=12"}; /* put your font here */
 static const char dmenufont[]       = "monospace:size=10";
-#if theme == blue
+#if ( theme == blue )
 	#include "color-palettes/dark-blue.h"
 #else
 	#include "color-palettes/green-forest.h"
@@ -41,7 +42,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "Gimp",      NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",   NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -50,6 +51,7 @@ static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
+/* color palette */
 #include "fibonacci.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
