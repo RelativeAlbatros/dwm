@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# must be run as root
+
+echo -e "\nupdating dwm...\n"
+sudo make clean install
+if [[ $? != 0 ]]; then
+	echo -e "\ndebug time...\n"
+	exit 1
+fi
+echo -e "\ndwm was succesfully installed!"
+exit 0
