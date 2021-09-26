@@ -8,6 +8,5 @@ else
 fi
 
 dwmbar &
-st &
 
 exit 0
