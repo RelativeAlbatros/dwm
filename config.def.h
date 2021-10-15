@@ -19,11 +19,7 @@ static const unsigned int borderalpha = OPAQUE;
 static const char theme[] = "blue";
 static const char *fonts[]          = { "Anonymice Nerd Font:size=12"}; /* put your font here */
 static const char dmenufont[]       = "monospace:size=10";
-#if ( theme == blue )
-	#include "color-palettes/dark-blue.h"
-#else
-	#include "color-palettes/green-forest.h"
-#endif
+#include "color-palettes/dark-blue.h"
 
 /* alpha bar transparency */
 static const unsigned int alphas[][3]      = {
