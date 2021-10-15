@@ -7,6 +7,6 @@ else
 	feh --bg-fill /usr/share/pixmaps/background.jpg
 fi
 
-dwmbar &
+# dwmbar &
 
 exit 0
