@@ -8,5 +8,5 @@ else
 fi
 
 # dwmbar &
-
+xsetroot -name "Arch Linux - Keep It Simple Stupid | "
 exit 0
