@@ -2,11 +2,11 @@
 
 # set background image
 if [[ -f $HOME/.fehbg ]]; then
-	~/.fehbg
+	$HOME/.fehbg &
 else
-	feh --bg-fill /usr/share/pixmaps/background.jpg
+	feh --bg-fill --randomize $HOME/pictures/random &
 fi
 
 # dwmbar &
-xsetroot -name "Arch Linux - Keep It Simple Stupid | "
+xsetroot -name "Arch Linux - Keep It Simple Stupid | " &
 exit 0
