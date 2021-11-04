@@ -73,6 +73,10 @@ Spawn
 .BR dmenu(1)
 for launching other programs.
 .TP
+.B Mod1\-Shift\-r
+start
+.BR rofi(1).
+.TP
 .B Mod1\-,
 Focus previous screen, if any.
 .TP
@@ -85,17 +89,11 @@ Send focused window to previous screen, if any.
 .B Mod1\-Shift\-.
 Send focused window to next screen, if any.
 .TP
-.B Mod1\-b
+.B Mod1\-Shift\-b
 Toggles bar on and off.
 .TP
-.B Mod1\-t
-Sets tiled layout.
-.TP
-.B Mod1\-f
-Sets floating layout.
-.TP
-.B Mod1\-m
-Sets monocle layout.
+.B Ctrl\-<number>
+changes layout.
 .TP
 .B Mod1\-space
 Toggles between current and previous layout.
@@ -119,7 +117,7 @@ Increase master area size.
 Decrease master area size.
 .TP
 .B Mod1\-Return
-Zooms/cycles focused window to/from master area (tiled layouts only).
+Zooms/cycles focused window to/from master area.
 .TP
 .B Mod1\-Shift\-c
 Close focused window.
@@ -150,6 +148,62 @@ Add/remove all windows with nth tag to/from the view.
 .TP
 .B Mod1\-Shift\-q
 Quit dwm.
+.TP
+.SS Layouts
+.TP
+.IP "1. Tiled"
+.IP "2. Floating"
+.IP "3. Monocle"
+.IP "4. CenteredMaster"
+.IP "5. CenteredFloatingMaster"
+.IP "6. Spiral"
+.IP "7. Dwindle"
+.IP "8. Bstack"
+.TP
+.SS Gaps Shortcuts
+.TP
+.B Mod1\-Mod4Mask\-0
+disable|enable gaps.
+.TP
+.B Mod1\-Mod4Mask\-Shift\-0
+resets to default values.
+.TP
+.B Mod1\-Mod4Mask\-h
+increases all gaps.
+.TP
+.B Mod1\-Mod4Mask\-l
+decreases all gaps.
+.TP
+.B Mod1\-Mod4Mask\-Ctrl\-h
+increases inner gaps.
+.TP
+.B Mod1\-Mod4Mask\-Ctrl\-l
+decreases inner gaps.
+.TP
+.B Mod1\-y
+increases inner horizontal gaps.
+.TP
+.B Mod1\-o
+decreases inner horizontal gaps.
+.TP
+.B Mod1\-Ctrl\-y
+increases inner vertical gaps.
+.TP
+.B Mod1\-Ctrl\-o
+decreases inner vertical gaps.
+.TP
+.B Mod1\-Mod4Mask\-y
+increases outer horizontal gaps.
+.TP
+.B Mod1\-Mod4Mask\-o
+decreases outer horizontal gaps.
+.TP
+.B Mod1\-Shift\-y
+increases outer vertical gaps.
+.TP
+.B Mod1\-Shift\-o
+decreases outer vertical gaps.
+.TP
 .SS Mouse commands
 .TP
 .B Mod1\-Button1
@@ -169,18 +223,17 @@ the following directories:
 .P
 The first existing directory is scanned for any of the autostart files below.
 .TP 15
-autostart.sh
+autostart
 This file is started as a shell background process before dwm enters its handler
 loop.
 .TP 15
-autostart_blocking.sh
-This file is started before any autostart.sh; dwm waits for its termination.
 .SH CUSTOMIZATION
-dwm is customized by creating a custom config.h and (re)compiling the source
+dwm is customized by creating a custom config.def.h and (re)compiling the source
 code. This keeps it fast, secure and simple.
 .SH SEE ALSO
 .BR dmenu (1),
-.BR st (1)
+.BR st (1),
+.BR rofi (1)
 .SH ISSUES
 Java applications which use the XToolkit/XAWT backend may draw grey windows
 only. The XToolkit/XAWT backend breaks ICCCM-compliance in recent JDK 1.5 and early
