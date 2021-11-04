@@ -17,7 +17,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char theme[] = "blue";
-static const char *fonts[]          = { "Anonymice Nerd Font:size=12"}; /* put your font here */
+static const char *fonts[]          = { "DroidSansMono Nerd Font:style=Book:size=12"}; /* put your font here */
 static const char dmenufont[]       = "monospace:size=10";
 #include "color-palettes/cheers.h"
 
