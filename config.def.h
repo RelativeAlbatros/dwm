@@ -19,7 +19,7 @@ static const unsigned int borderalpha = OPAQUE;
 static const char theme[] = "blue";
 static const char *fonts[]          = { "Anonymice Nerd Font:size=12"}; /* put your font here */
 static const char dmenufont[]       = "monospace:size=10";
-#include "color-palettes/dark-blue.h"
+#include "color-palettes/cheers.h"
 
 /* alpha bar transparency */
 static const unsigned int alphas[][3]      = {
@@ -29,8 +29,8 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging: dwm crashes if the number of tags do not match. */
-static const char *tags[] = { "\uf303", "\ue795", "\ue795", "\ue795", "\ue62b", "\uf09b", "\uf0e6", "\uf269" };
-static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7","8" };
+static const char *tags[] = { "\uf303", "\ue795", "\ue795", "\ue795", "\ue62b", "\uf0e6", "\uf269" };
+static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7" };
 
 static const Rule rules[] = {
 	/* xprop(1):

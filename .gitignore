@@ -1,9 +1,9 @@
+config.h
+drw.o
+util.o
+dwm.o
+dwm
 *.swp
 *.swo
 *.rej
-*.o
 *.orig
-xinitrc.example
-dwmstatus/dwmstatus
-dwm
-original-dwm.c
