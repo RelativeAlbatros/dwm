@@ -37,8 +37,8 @@ static const char *colors[][3]      = {
 	[SchemeNorm]      = { col_nord01, col_nord01,   col_nord01 },
 	[SchemeSel]       = { col_nord01, col_nord02,   col_nord11 },
 	[SchemeStatus]    = { col_nord10, col_nord02,   "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]   = { col_nord05, col_nord03,   "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-  [SchemeTagsNorm]  = { col_nord02, col_nord02,   "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+	[SchemeTagsSel]   = { col_nord07, col_nord03,   "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+  [SchemeTagsNorm]  = { col_nord05, col_nord02,   "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
   [SchemeInfoSel]   = { col_nord11, col_nord02,   "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
   [SchemeInfoNorm]  = { col_nord03, col_nord01,   "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };

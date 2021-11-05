@@ -86,6 +86,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+// TODO:
 	// { MODKEY|ShiftMask,             XK_f,  	 	spawn,          {.v = firefox } }, // opens firefox
 	// { MODKEY|ShiftMask,             XK_w,  	 	spawn,          {.v = weechat } }, // opens weechat
 	// { MODKEY|ShiftMask,             XK_v,  	 	spawn,          {.v = nvim } }, // opens vim
@@ -146,6 +147,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ Mod4Mask,                     XK_l,      quit,           {0} },
 };
 
 /* button definitions */
