@@ -8,7 +8,8 @@ else
 fi
 
 # dwmbar &
-# start compton composite manager
-compton &
+# start a composite manager
+xcompmgr &
+
 xsetroot -name "  Arch Linux | " &
 exit 0
