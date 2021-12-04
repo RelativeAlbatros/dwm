@@ -264,7 +264,7 @@ static void defaultgaps(const Arg *arg);
 
 /* custom functions*/
 static void runAutostart(void);
-static void rofiRun(const Arg *arg);
+//static void runwindow(const Arg *arg);
 
 /* variables */
 static const char broken[] = "broken";
@@ -2600,17 +2600,22 @@ zoom(const Arg *arg)
 			return;
 	pop(c);
 }
+
 /* custom functions */
 void 
 runAutostart(void) {
-  system("cd ~/.dwm; ./autostart_blocking.sh");
   system("cd ~/.dwm; ./autostart");
 }
 
-void
-rofiRun(const Arg *arg) {
-	system("rofi -show run");
-}
+/* void
+ * runwindow(const Arg *arg) {
+ 	if(Arg == "rofi") {
+ * 		system("rofi -show run");
+ * 	}
+ * 	else{
+ * 		system(Arg);
+ * 	}
+ * } */
 
 int
 main(int argc, char *argv[])

@@ -9,7 +9,6 @@ fi
 
 # dwmbar &
 # start a composite manager
-xcompmgr &
 
 xsetroot -name "  Arch Linux | " &
 exit 0

@@ -97,7 +97,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
-	{ MODKEY|ShiftMask,             XK_r,      rofiRun, 	     {0} },
+	//{ MODKEY|ShiftMask,             XK_r,      rofiRun, 	     {0} },
   /* layouts */
 	{ ControlMask,                  XK_1,      setlayout,      {.v = &layouts[0]} },
 	{ ControlMask,                  XK_2,      setlayout,      {.v = &layouts[1]} },
