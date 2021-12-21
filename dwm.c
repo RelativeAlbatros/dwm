@@ -11,6 +11,7 @@
  * in O(1) time.
  *
  * Each child of the root window is called a client, except windows which have
+
  * set the override_redirect flag. Clients are organized in a linked client
  * list on each monitor, the focus history is remembered through a stack list
  * on each monitor. Each client contains a bit array to indicate the tags of a
@@ -264,7 +265,7 @@ static void defaultgaps(const Arg *arg);
 
 /* custom functions*/
 static void runAutostart(void);
-static void rofiRun(void);
+static void rofiRun(const Arg *arg);
 
 /* variables */
 static const char broken[] = "broken";
@@ -2608,7 +2609,7 @@ runAutostart(void) {
 }
 
 void
-rofiRun(void) {
+rofiRun(const Arg *arg) {
 	system("rofi -show run");
 }
 
