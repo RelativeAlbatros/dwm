@@ -4,21 +4,21 @@
 #define TERM "st"
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 15;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 15;       /* vert outer gap between windows and screen edge */
 static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
-static const int user_bh            = 28;       /* dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 24;       /* dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *fonts[]          = { "ProFontIIx Nerd Font:style=Book:size=10"}; 
 static const char dmenufont[]       = "monospace:size=10";
-#include "color-palettes/nord.h"
+#include "color-palettes/gruvbox.h"
 
 /* alpha bar transparency */
 static const unsigned int alphas[][3]      = {
@@ -83,10 +83,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-// TODO:
-	// { MODKEY|ShiftMask,             XK_f,  	 	spawn,          {.v = firefox } }, // opens firefox
-	// { MODKEY|ShiftMask,             XK_w,  	 	spawn,          {.v = weechat } }, // opens weechat
-	// { MODKEY|ShiftMask,             XK_v,  	 	spawn,          {.v = nvim } }, // opens vim
+//	{ MODKEY|ShiftMask,             XK_f,	   spawn,          {.v = browser } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
