@@ -8,7 +8,6 @@ else
 fi
 
 # dwmbar &
-# start a composite manager
 
-xsetroot -name "  Arch Linux | " &
+xsetroot -name " Arch Linux |" &
 exit 0
