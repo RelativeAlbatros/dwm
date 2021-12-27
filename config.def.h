@@ -28,8 +28,8 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging: dwm crashes if the number of tags do not match. */
-static const char *tags[] = { "\uf303", "\ue795", "\ue795", "\ue795", "\ue62b", "\uf0e6", "\uf269" };
-static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7" };
+static const char *tagsalt[] = { "\uf303", "\ue795", "\ue795", "\ue795", "\ue62b", "\uf0e6", "\uf269" };
 
 static const Rule rules[] = {
 	/* xprop(1):
