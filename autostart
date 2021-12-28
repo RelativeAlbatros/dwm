@@ -3,11 +3,11 @@
 # set background image
 if [[ -f $HOME/.fehbg ]]; then
 	$HOME/.fehbg &
-else
-	feh --bg-fill --randomize $HOME/pictures/random &
 fi
 
 # dwmbar &
+picom &
 
-xsetroot -name " Arch Linux |" &
+xsetroot -name "[4r2h/H4x0r|31337]" &
+
 exit 0
