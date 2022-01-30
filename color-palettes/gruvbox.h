@@ -23,10 +23,10 @@ static const char col_cyan[]        = "#005577";
 /* scheme */
 static const char *colors[][3]      = {
     /*                    fg        bg      border   */
-    [SchemeNorm]      = { fg,     bg,     bg3        },
-    [SchemeSel]       = { fg,     bg,     yellow     },
-    [SchemeStatus]    = { bg,     green, "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-    [SchemeTagsSel]   = { bg,     bg,   "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+    [SchemeNorm]      = { fg,     bg,    bg3        },
+    [SchemeSel]       = { fg,     bg,    yellow     },
+    [SchemeStatus]    = { green,  bg2,   "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+    [SchemeTagsSel]   = { blue,   bg2,   "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
     [SchemeTagsNorm]  = { fg2,    bg,    "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
     [SchemeInfoSel]   = { fg,     bg,    "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
     [SchemeInfoNorm]  = { bg,     bg,    "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}

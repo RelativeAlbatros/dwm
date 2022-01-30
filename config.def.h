@@ -14,7 +14,7 @@ static const int smartgaps          = 1;        /* 1 means no outer gap when the
 static const int user_bh            = 24;       /* dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = 0xff;
 static const unsigned int borderalpha = OPAQUE;
 static const char *fonts[]          = { "ProFontIIx Nerd Font:style=Book:size=10"}; 
 static const char dmenufont[]       = "monospace:size=10";

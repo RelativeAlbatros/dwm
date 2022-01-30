@@ -5,9 +5,7 @@ if [[ -f $HOME/.fehbg ]]; then
 	$HOME/.fehbg &
 fi
 
-# dwmbar &
+dwmbar &
 picom &
-
-xsetroot -name "[4r2h/H4x0r|31337]" &
 
 exit 0
