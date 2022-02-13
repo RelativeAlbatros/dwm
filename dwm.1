@@ -1,6 +1,6 @@
 .TH DWM 1 dwm\-VERSION
 .SH NAME
-dwm \- dynamic window manager (ZigZag35 (https://github.com/ZigZag35)'s build)
+dwm \- dynamic window manager
 .SH SYNOPSIS
 .B dwm
 .RB [ \-v ]
@@ -30,14 +30,6 @@ top left corner.  The tags which are applied to one or more windows are
 indicated with an empty square in the top left corner.
 .P
 dwm draws a small border around windows to indicate the focus state.
-.P
-On start, dwm can start additional programs that may be specified in two special
-shell scripts (see the FILES section below), autostart_blocking.sh and
-autostart.sh.  The former is executed first and dwm will wait for its
-termination before starting.  The latter is executed in the background before
-dwm enters its handler loop.
-.P
-Either of these files may be omitted.
 .SH OPTIONS
 .TP
 .B \-v
@@ -73,10 +65,6 @@ Spawn
 .BR dmenu(1)
 for launching other programs.
 .TP
-.B Mod1\-Shift\-r
-start
-.BR rofi(1).
-.TP
 .B Mod1\-,
 Focus previous screen, if any.
 .TP
@@ -89,11 +77,17 @@ Send focused window to previous screen, if any.
 .B Mod1\-Shift\-.
 Send focused window to next screen, if any.
 .TP
-.B Mod1\-Shift\-b
+.B Mod1\-b
 Toggles bar on and off.
 .TP
-.B Ctrl\-<number>
-changes layout.
+.B Mod1\-t
+Sets tiled layout.
+.TP
+.B Mod1\-f
+Sets floating layout.
+.TP
+.B Mod1\-m
+Sets monocle layout.
 .TP
 .B Mod1\-space
 Toggles between current and previous layout.
@@ -117,7 +111,7 @@ Increase master area size.
 Decrease master area size.
 .TP
 .B Mod1\-Return
-Zooms/cycles focused window to/from master area.
+Zooms/cycles focused window to/from master area (tiled layouts only).
 .TP
 .B Mod1\-Shift\-c
 Close focused window.
@@ -148,62 +142,6 @@ Add/remove all windows with nth tag to/from the view.
 .TP
 .B Mod1\-Shift\-q
 Quit dwm.
-.TP
-.SS Layouts
-.TP
-.IP "1. Tiled"
-.IP "2. Floating"
-.IP "3. Monocle"
-.IP "4. CenteredMaster"
-.IP "5. CenteredFloatingMaster"
-.IP "6. Spiral"
-.IP "7. Dwindle"
-.IP "8. Bstack"
-.TP
-.SS Gaps Shortcuts
-.TP
-.B Mod1\-Mod4Mask\-0
-disable|enable gaps.
-.TP
-.B Mod1\-Mod4Mask\-Shift\-0
-resets to default values.
-.TP
-.B Mod1\-Mod4Mask\-h
-increases all gaps.
-.TP
-.B Mod1\-Mod4Mask\-l
-decreases all gaps.
-.TP
-.B Mod1\-Mod4Mask\-Ctrl\-h
-increases inner gaps.
-.TP
-.B Mod1\-Mod4Mask\-Ctrl\-l
-decreases inner gaps.
-.TP
-.B Mod1\-y
-increases inner horizontal gaps.
-.TP
-.B Mod1\-o
-decreases inner horizontal gaps.
-.TP
-.B Mod1\-Ctrl\-y
-increases inner vertical gaps.
-.TP
-.B Mod1\-Ctrl\-o
-decreases inner vertical gaps.
-.TP
-.B Mod1\-Mod4Mask\-y
-increases outer horizontal gaps.
-.TP
-.B Mod1\-Mod4Mask\-o
-decreases outer horizontal gaps.
-.TP
-.B Mod1\-Shift\-y
-increases outer vertical gaps.
-.TP
-.B Mod1\-Shift\-o
-decreases outer vertical gaps.
-.TP
 .SS Mouse commands
 .TP
 .B Mod1\-Button1
@@ -214,26 +152,12 @@ Toggles focused window between floating and tiled state.
 .TP
 .B Mod1\-Button3
 Resize focused window while dragging. Tiled windows will be toggled to the floating state.
-.SH FILES
-The files containing programs to be started along with dwm are searched for in
-the following directories:
-.IP "1. $XDG_DATA_HOME/dwm"
-.IP "2. $HOME/.local/share/dwm"
-.IP "3. $HOME/.dwm"
-.P
-The first existing directory is scanned for any of the autostart files below.
-.TP 15
-autostart
-This file is started as a shell background process before dwm enters its handler
-loop.
-.TP 15
 .SH CUSTOMIZATION
-dwm is customized by creating a custom config.def.h and (re)compiling the source
+dwm is customized by creating a custom config.h and (re)compiling the source
 code. This keeps it fast, secure and simple.
 .SH SEE ALSO
 .BR dmenu (1),
-.BR st (1),
-.BR rofi (1)
+.BR st (1)
 .SH ISSUES
 Java applications which use the XToolkit/XAWT backend may draw grey windows
 only. The XToolkit/XAWT backend breaks ICCCM-compliance in recent JDK 1.5 and early

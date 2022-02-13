@@ -1,11 +1,7 @@
-#!/bin/bash
+#/bin/bash
 
-# set background image
-if [[ -f $HOME/.fehbg ]]; then
-	$HOME/.fehbg &
+if [[ -f ~/.fehbg ]]; then
+    ~/.fehbg &
 fi
 
 dwmbar &
-picom &
-
-exit 0
