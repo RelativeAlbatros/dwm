@@ -1,0 +1,3 @@
+[submodule "dwmbar"]
+	path = dwmbar
+	url = https://github.com/thytom/dwmbar
