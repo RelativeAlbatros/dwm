@@ -4,5 +4,6 @@ if [[ -f ~/.fehbg ]]; then
     ~/.fehbg &
 fi
 
+twmnd &
 xcompmgr &
 dwmbar &
