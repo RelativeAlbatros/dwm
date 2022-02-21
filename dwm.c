@@ -251,7 +251,7 @@ static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
 static void rofi(const Arg *arg);
 static void autostart(void);
-//static void setbacklight(const Arg *arg);
+static void incrbrg(const Arg *arg);
 
 /* variables */
 static const char broken[] = "broken";
@@ -2343,13 +2343,13 @@ autostart(void){
 	system("~/.dwm/autostart");
 }
 
-/* void
-setbacklight(const Arg *arg){
-	if(arg[0] == 1)
+void
+incrbrg(const Arg *arg){
+	if(arg->i == +1)
 		system("xbacklight -inc 10");
-	else if(arg[0] == -1)
+	else if(arg->i == -1)
 		system("xbacklight -dec 10");
-} */
+}
 
 int
 main(int argc, char *argv[])
