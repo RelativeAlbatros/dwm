@@ -252,6 +252,7 @@ static void zoom(const Arg *arg);
 static void rofi(const Arg *arg);
 static void autostart(void);
 static void incrbrg(const Arg *arg);
+static void setbg(void);
 
 /* variables */
 static const char broken[] = "broken";
@@ -2349,6 +2350,11 @@ incrbrg(const Arg *arg){
 		system("xbacklight -inc 10");
 	else if(arg->i == -1)
 		system("xbacklight -dec 10");
+}
+
+void
+setbg(void){
+	system("~/.fehbg");
 }
 
 int

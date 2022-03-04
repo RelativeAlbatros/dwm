@@ -25,7 +25,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "5", "8", "13", "21", "34", "55" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -75,6 +75,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_n,      setbg,          {0} },
 	{ MODKEY|ShiftMask,             XK_o,      incrbrg,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_p,      incrbrg,        {.i = -1 } },
 	{ MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } },
