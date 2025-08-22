@@ -3,28 +3,6 @@ dwm - dynamic window manager
 dwm is an extremely fast, small, and dynamic window manager for X.
 
 
-Applied patches
----------------
-- colorbar.diff
-- pertag.diff
-- always-center.diff
-- bottom stack
--  
-
-todo
-----
-- cycle layouts
-
-Note
-----
-(auto start script): dwm executes $XDD_DATA_HOME/dwm if set or ~/.local/dwm
-at runtime.
-
-Apply patches
--------------
-add a 'rm config.h' in the make file under clean
-check config.h
-
 Requirements
 ------------
 In order to build dwm you need the Xlib header files.
