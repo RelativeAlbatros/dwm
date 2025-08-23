@@ -7,7 +7,7 @@ VERSION = 6.6-2
 PREFIX = /usr/local
 MANPREFIX = ${PREFIX}/share/man
 
-INC = /usr/local/include 
+INC = /usr/local/include
 LIB = /usr/local/lib
 
 # Xinerama, comment if you don't want it
@@ -17,18 +17,13 @@ XINERAMAFLAGS = -DXINERAMA
 # freetype
 FREETYPELIBS = -lfontconfig -lXft
 FREETYPEINC = /usr/local/include/freetype2
-
-# FREEBSD epoll
-EPOLLLIBS= -lyajl -lepoll-shim
-EPOLLINC = /usr/local/include/libepoll-shim
-
 # OpenBSD (uncomment)
 #FREETYPEINC = ${X11INC}/freetype2
 #MANPREFIX = ${PREFIX}/man
 
 # includes and libs
-INCS = -I${INC} -I${FREETYPEINC} -I${EPOLLINC}
-LIBS = -L${LIB} -lX11 ${XINERAMALIBS} ${FREETYPELIBS} ${EPOLLLIBS}
+INCS = -I${INC} -I${FREETYPEINC}
+LIBS = -L${LIB} -lX11 ${XINERAMALIBS} ${FREETYPELIBS}
 
 # flags
 CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700L -DVERSION=\"${VERSION}\" ${XINERAMAFLAGS}

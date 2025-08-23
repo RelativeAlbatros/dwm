@@ -1,3 +1,0 @@
-yajl
-libepoll-shim
-libX11
