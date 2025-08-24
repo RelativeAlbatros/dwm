@@ -14,7 +14,6 @@ all: dwm
 ${OBJ}: config.h config.mk
 
 dwm: ${OBJ}
-	cp config.def.h config.h
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
 
 clean:
