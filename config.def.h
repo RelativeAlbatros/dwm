@@ -87,6 +87,7 @@ static const char *dmenucmd[] = { "rofi", "-dmenu", NULL };
 static const char *roficmd[] = { "rofi", "-show", "run", NULL };
 static const char *filebrowser_cmd[] = { "rofi", "-show", "filebrowser", NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *layoutmenu_cmd = "layoutmenu.sh"; // TODO: read from layouts
 static const char *up_vol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",    NULL };
 static const char *down_vol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%",    NULL };
 static const char *mute_vol[] = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle", NULL };
@@ -102,7 +103,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_u,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = +0.25} },
@@ -129,7 +130,18 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_s,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,                       XK_d,      setlayout,      {.v = &layouts[4]} },
+	// { MODKEY|ShiftMask,             XK_d,      setlayout,      {.v = &layouts[5]} },
+	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[6]} },
+	//{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[7]} },
+	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[8]} },
+	{ MODKEY,                       XK_n,      setlayout,      {.v = &layouts[9]} },
+	// { MODKEY,                       XK_g,      setlayout,      {.v = &layouts[10]} },
+	// { MODKEY,                       XK_g,      setlayout,      {.v = &layouts[11]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[12]} },
+	// { MODKEY,                       XK_g,      setlayout,      {.v = &layouts[13]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
@@ -160,7 +172,7 @@ static const Key keys[] = {
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkLtSymbol,          0,              Button3,        layoutmenu,     {0} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
