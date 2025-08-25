@@ -1,6 +1,7 @@
 *.swp
 *.swo
 *.rej
+*.orig
 *.o
 dwm
 config.h
