@@ -87,7 +87,6 @@ static const char *dmenucmd[] = { "rofi", "-dmenu", NULL };
 static const char *roficmd[] = { "rofi", "-show", "run", NULL };
 static const char *filebrowser_cmd[] = { "rofi", "-show", "filebrowser", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *layoutmenu_cmd = "layoutmenu.sh"; // TODO: read from layouts
 static const char *up_vol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",    NULL };
 static const char *down_vol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%",    NULL };
 static const char *mute_vol[] = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle", NULL };
@@ -172,7 +171,6 @@ static const Key keys[] = {
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        layoutmenu,     {0} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
