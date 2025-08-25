@@ -7,8 +7,8 @@ VERSION = 6.6-2
 PREFIX = /usr/local
 MANPREFIX = ${PREFIX}/share/man
 
-INC = /usr/local/include
-LIB = /usr/local/lib
+INC = /usr/include
+LIB = /usr/lib
 
 # Xinerama, comment if you don't want it
 XINERAMALIBS  = -lXinerama
@@ -16,7 +16,13 @@ XINERAMAFLAGS = -DXINERAMA
 
 # freetype
 FREETYPELIBS = -lfontconfig -lXft
-FREETYPEINC = /usr/local/include/freetype2
+FREETYPEINC = /usr/include/freetype2
+
+# FreeBSD
+#INC = /usr/local/include
+#LIB = /usr/local/lib
+#FREETYPEINC = /usr/local/include/freetype2
+
 # OpenBSD (uncomment)
 #FREETYPEINC = ${X11INC}/freetype2
 #MANPREFIX = ${PREFIX}/man
