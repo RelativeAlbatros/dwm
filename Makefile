@@ -13,11 +13,14 @@ all: dwm
 
 ${OBJ}: config.h config.mk
 
+config.h: config.def.h
+	cp config.def.h config.h
+
 dwm: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
 
 clean:
-	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz
+	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz config.h
 
 dist: clean
 	mkdir -p dwm-${VERSION}
