@@ -92,6 +92,7 @@ static const char *down_vol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", 
 static const char *mute_vol[] = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle", NULL };
 static const char *brighter[] = { "brightnessctl", "set", "10%+", NULL };
 static const char *dimmer[]   = { "brightnessctl", "set", "10%-", NULL };
+static const char *ch_bg[]    = { "${HOME}/.fehbg", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -149,6 +150,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = ch_bg } },
 	{ 0,                            XF86XK_AudioMute,        spawn, {.v = mute_vol } },
 	{ 0,                            XF86XK_AudioLowerVolume, spawn, {.v = down_vol } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = up_vol } },
