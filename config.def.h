@@ -147,8 +147,9 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_s,      setlayout,      {.v = &layouts[3]} },
 	{ Mod4Mask,                     XK_d,      setlayout,      {.v = &layouts[4]} },
 	// { Mod4Mask|ShiftMask,           XK_d,      setlayout,      {.v = &layouts[5]} },
-	{ Mod4Mask|ShiftMask,           XK_t,      setlayout,      {.v = &layouts[6]} },
-	//{ Mod4Mask,                     XK_m,      setlayout,      {.v = &layouts[7]} },
+	// stack is just nrowgrid with 1 nmaster
+	// { Mod4Mask|ShiftMask,        XK_t,      setlayout,      {.v = &layouts[6]} },
+	//{ Mod4Mask,                   XK_m,      setlayout,      {.v = &layouts[7]} },
 	{ Mod4Mask,                     XK_g,      setlayout,      {.v = &layouts[8]} },
 	{ Mod4Mask,                     XK_n,      setlayout,      {.v = &layouts[9]} },
 	// { Mod4Mask,                     XK_g,      setlayout,      {.v = &layouts[10]} },
