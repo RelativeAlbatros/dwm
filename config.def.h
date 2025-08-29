@@ -88,6 +88,8 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
+static char fehbg[64];
+
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-dmenu", NULL };
@@ -99,7 +101,7 @@ static const char *down_vol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", 
 static const char *mute_vol[] = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle", NULL };
 static const char *brighter[] = { "brightnessctl", "set", "10%+", NULL };
 static const char *dimmer[]   = { "brightnessctl", "set", "10%-", NULL };
-static const char *ch_bg[]    = { "${HOME}/.fehbg", NULL };
+static const char *ch_bg[]    = { fehbg, NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
@@ -109,6 +111,7 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_r,      spawn,          {.v = roficmd } },
 	{ Mod4Mask,                     XK_e,      spawn,          {.v = filebrowser_cmd } },
 	{ Mod4Mask,                     XK_Return, spawn,          {.v = termcmd } },
+	{ Mod4Mask,                     XK_n,      spawn,          {.v = ch_bg } },
 	{ Mod4Mask,                     XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ Mod4Mask,                     XK_b,      togglebar,      {0} },
 	{ Mod4Mask,                     XK_j,      focusstack,     {.i = +1 } },
@@ -164,7 +167,6 @@ static const Key keys[] = {
 	{ Mod4Mask,                     XK_period, focusmon,       {.i = +1 } },
 	{ Mod4Mask|ShiftMask,           XK_comma,  tagmon,         {.i = -1 } },
 	{ Mod4Mask|ShiftMask,           XK_period, tagmon,         {.i = +1 } },
-	{ Mod4Mask,                     XK_n,      spawn,          {.v = ch_bg } },
 	{ 0,                            XF86XK_AudioMute,        spawn, {.v = mute_vol } },
 	{ 0,                            XF86XK_AudioLowerVolume, spawn, {.v = down_vol } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = up_vol } },

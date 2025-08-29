@@ -2000,6 +2000,7 @@ setup(void)
 	XChangeWindowAttributes(dpy, root, CWEventMask|CWCursor, &wa);
 	XSelectInput(dpy, root, wa.event_mask);
 	grabkeys();
+	sprintf(fehbg, "/home/%s/.fehbg", getlogin());
 	focus(NULL);
 }
 void
