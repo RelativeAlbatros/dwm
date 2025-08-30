@@ -191,12 +191,12 @@ static const Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
-	{ ClkClientWin,         Mod4Key,        Button1,        movemouse,      {0} },
-	{ ClkClientWin,         Mod4Key,        Button2,        togglefloating, {0} },
-	{ ClkClientWin,         Mod4Key,        Button3,        resizemouse,    {0} },
+	{ ClkClientWin,         Mod4Mask,       Button1,        movemouse,      {0} },
+	{ ClkClientWin,         Mod4Mask,       Button2,        togglefloating, {0} },
+	{ ClkClientWin,         Mod4Mask,       Button3,        resizemouse,    {0} },
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
-	{ ClkTagBar,            Mod4Key,        Button1,        tag,            {0} },
-	{ ClkTagBar,            Mod4Key,        Button3,        toggletag,      {0} },
+	{ ClkTagBar,            Mod4Mask,       Button1,        tag,            {0} },
+	{ ClkTagBar,            Mod4Mask,       Button3,        toggletag,      {0} },
 };
 

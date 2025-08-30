@@ -1,6 +1,7 @@
 *.swp
 *.swo
 *.rej
+.ccls-cache/
 *.orig
 *.o
 dwm
