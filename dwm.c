@@ -202,7 +202,7 @@ static void focusstack(const Arg *arg);
 static Atom getatomprop(Client *c, Atom prop);
 static int getrootptr(int *x, int *y);
 static long getstate(Window w);
-static unsigned int getsystraywidth();
+static unsigned int getsystraywidth(void);
 static int gettextprop(Window w, Atom atom, char *text, unsigned int size);
 static void grabbuttons(Client *c, int focused);
 static void grabkeys(void);
@@ -854,15 +854,13 @@ void
 drawbar(Monitor *m)
 {
 	int x, w, tw = 0, stw = 0;
-	if (usealtbar)
-		return;
 
 	int boxs = drw->fonts->h / 9;
 	int boxw = drw->fonts->h / 6 + 2;
 	unsigned int i, occ = 0, urg = 0;
 	Client *c;
 
-	if (!m->showbar)
+	if (usealtbar || !m->showbar)
 		return;
 
 	if(showsystray && m == systraytomon(m) && !systrayonleft)
@@ -903,7 +901,7 @@ drawbar(Monitor *m)
 			msx = (m->ww - TEXTW(mstext) + lrpad) / 2; /* x position of middle status text */
 			drw_text(drw, msx, 0, TEXTW(mstext) - lrpad, bh, 0, mstext, 0);
 		}
-		tw = TEXTW(rstext) - lrpad + 2; /* 2px right padding */
+		tw = TEXTW(rstext) - lrpad + 2 + getsystraywidth(); /* 2px right padding */
 		drw_text(drw, m->ww - tw, 0, tw, bh, 0, rstext, 0);
 	}
 	drw_map(drw, m->barwin, 0, 0, m->ww - stw, bh);
@@ -1054,7 +1052,7 @@ getatomprop(Client *c, Atom prop)
 }
 
 unsigned int
-getsystraywidth()
+getsystraywidth(void)
 {
 	unsigned int w = 0;
 	Client *i;
