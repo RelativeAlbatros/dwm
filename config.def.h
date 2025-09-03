@@ -37,16 +37,24 @@ static const char *colors[][3]      = {
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
+/* appicons */
+/* NOTE: set to 0 to set to default (whitespace) */
+static char outer_separator_beg      = '[';
+static char outer_separator_end      = ']';
+static char inner_separator          = ' ';
+static unsigned truncate_icons_after = 3; /* will default to 1, that is the min */
+static char truncate_symbol[]         = "...";
+
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Firefox",      NULL,       NULL,       1 << 8,  0,           -1 },
-	{ "Thunar",       NULL,       NULL,       0,       1,           -1 },
-	{ "pavucontrol",  NULL,       NULL,       0,       1,           -1 },
-	{ "Toolkit",      NULL,       NULL,       0,       1,           -1 },
+	/* class      instance    title       tags mask    isfloating   monitor appicon */
+	{ "st",           NULL,       NULL,       0,       0,           -1, "" },
+	{ "Thunar",       NULL,       NULL,       0,       1,           -1, NULL },
+	{ "pavucontrol",  NULL,       NULL,       0,       1,           -1, NULL },
+	{ "Toolkit",      NULL,       NULL,       0,       1,           -1, NULL },
 };
 
 /* layout(s) */
